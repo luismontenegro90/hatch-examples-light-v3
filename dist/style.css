@@ -1,0 +1,77 @@
+@font-face{font-family:Recoleta;src:url("assets/fonts/Recoleta-Medium.ttf") format("truetype");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Recoleta;src:url("assets/fonts/Recoleta-Bold.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-thin.otf") format("opentype");font-style:normal;font-weight:100;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-thin-italic.otf") format("opentype");font-style:italic;font-weight:100;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-extra-light.otf") format("opentype");font-style:normal;font-weight:200;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-extra-light-italic.otf") format("opentype");font-style:italic;font-weight:200;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-light.otf") format("opentype");font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-light-italic.otf") format("opentype");font-style:italic;font-weight:300;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-regular.otf") format("opentype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-regular-italic.otf") format("opentype");font-style:italic;font-weight:400;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-semi-bold.otf") format("opentype");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-semi-bold-italic.otf") format("opentype");font-style:italic;font-weight:600;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-bold.otf") format("opentype");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-bold-italic.otf") format("opentype");font-style:italic;font-weight:700;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-black.otf") format("opentype");font-style:normal;font-weight:900;font-display:swap}
+@font-face{font-family:"Lota Grotesque Alt";src:url("assets/fonts/lota/lota-grotesque-alt-2-black-italic.otf") format("opentype");font-style:italic;font-weight:900;font-display:swap}
+:root{--ink:#050706;--mint:#99ffcc;--paper:#f5f5f2;--text:#ecefed;--muted:#b9bfbb;--line:#d8d9d5;--max:1280px;--font-grotesque:"Lota Grotesque Alt",Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-grotesque);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.hero{min-height:525px;background:#050606;color:var(--text);position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(420px,.95fr) minmax(460px,1.05fr);align-items:center;gap:40px;padding:76px max(5.5vw,32px) 78px}
+.hero:after{content:"";position:absolute;left:42%;right:-7%;bottom:-162px;height:310px;background:radial-gradient(ellipse at center,#000 0%,#000 59%,transparent 60%);opacity:.95;pointer-events:none}
+.hero-copy{position:relative;z-index:3;max-width:590px;align-self:center}
+.eyebrow{display:flex;align-items:center;gap:11px;color:#d9dfdb;font-size:14px;line-height:1.3;letter-spacing:.01em;margin:0 0 24px}
+.eyebrow span{display:inline-block;width:16px;height:7px;border-radius:99px;background:var(--mint)}
+h1,h2,p{margin-top:0}
+.hero h1{font:500 clamp(54px,6vw,82px)/.98 Recoleta,Georgia,serif;letter-spacing:-.045em;max-width:610px;margin-bottom:28px}
+.hero h1 em,.closing h2 em{font-style:normal;color:var(--mint)}
+.hero-copy>p{font-size:16px;line-height:1.45;color:#c5cac6;margin:0 0 39px}
+.button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:0 20px;background:var(--mint);border-radius:999px;color:#101711;text-decoration:none;font-size:14px;line-height:1;font-weight:500;transition:transform .2s ease,background .2s ease}
+.button span{font-size:25px;line-height:10px;margin-top:-2px}
+.button:hover{transform:translateY(-2px);background:#b1ffda}
+.button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.hero-art{position:relative;z-index:2;width:min(100%,570px);height:340px;justify-self:end;margin-right:2.4vw;align-self:center}
+.hero-set{position:absolute;top:0;right:0;width:100%;height:100%;object-fit:cover;border-radius:14px}
+.hero-reel{position:absolute;width:168px;left:-82px;bottom:-28px;overflow:hidden;border:5px solid #f4f1f5;border-radius:7px;background:#faf9fb;box-shadow:0 9px 20px #0008;transform:rotate(-.5deg)}
+.hero-reel>img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+.reel-controls{height:21px;display:flex;align-items:center;gap:6px;padding:0 7px;color:#677078;background:#f6f5f6;font-size:10px}
+.reel-controls i{width:8px;height:8px;border:1px solid #9ca2a6;border-radius:2px;margin-left:auto}
+.brand-statement{min-height:405px;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:75px max(5vw,24px) 18px;position:relative;text-align:center}
+.brand-statement>p{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;color:#686c68;font-size:clamp(24px,2.7vw,36px);line-height:1.3;letter-spacing:.005em;margin:0 auto;max-width:1120px}
+.brand-statement>p img{width:48px;height:48px;flex:none;border-radius:10px}
+.brand-statement strong{font:700 1em/1.25 Recoleta,Georgia,serif;color:#111311;letter-spacing:-.025em}
+.examples-placeholder{position:absolute;bottom:15px;left:0;right:0;font-size:11px;line-height:1.3;color:#555b57;text-align:center}
+.brand-statement:after{content:"";position:absolute;height:1px;background:var(--line);bottom:0;left:5.5%;right:5.5%}
+.ticker{height:330px;background:#050606;color:#f1f2f1;display:flex;align-items:center;overflow:hidden;position:relative}
+.ticker-track{display:flex;align-items:center;gap:24px;width:max-content;white-space:nowrap;animation:ticker 36s linear infinite;font-size:clamp(42px,5.5vw,76px);font-weight:300;letter-spacing:-.04em;padding-left:4vw}
+.ticker-track img{height:.58em;width:.58em;border-radius:.13em;flex:none}
+@keyframes ticker{to{transform:translateX(-50%)}}
+.closing{padding:118px max(5.5vw,32px);background:var(--paper)}
+.closing-card{max-width:var(--max);min-height:440px;margin:auto;border-radius:14px;background:#050606;color:var(--text);position:relative;overflow:hidden;display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;padding:72px 7%}
+.closing-card:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 78% 50%,transparent 20%,#050606 68%),url("assets/figma/vector-13.svg") center/cover no-repeat;opacity:.08;pointer-events:none}
+.closing-copy{z-index:2;position:relative;max-width:390px}
+.closing h2{font:500 clamp(42px,4.2vw,58px)/1.04 Recoleta,Georgia,serif;letter-spacing:-.04em;margin:0 0 22px}
+.closing-copy p{max-width:310px;font-size:16px;line-height:1.5;color:#d1d5d2;margin:0 0 32px}
+.closing-art{position:relative;z-index:1;height:300px;min-width:0;display:flex;align-items:center;justify-content:flex-end}
+.podcast-scene{height:100%;width:77%;object-fit:cover;object-position:center;border-radius:6px}
+.post-card{position:absolute;width:125px;left:4%;bottom:2px;border:5px solid #f7f5f7;border-radius:6px;overflow:hidden;background:#f7f5f7;box-shadow:0 8px 24px #0008;transform:rotate(.3deg)}
+.post-card>img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+.site-footer{min-height:390px;background:#050606;color:#bdc2bf;position:relative;overflow:hidden;padding:38px max(5.5vw,32px) 0}
+.footer-main{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:34px;position:relative;z-index:1}
+.footer-mark{width:48px;height:48px;display:block}
+.footer-mark img{width:100%;height:100%;display:block}
+.footer-main nav{display:flex;justify-content:center;align-items:center;gap:clamp(16px,3vw,42px)}
+.footer-main nav a{text-decoration:none;font-size:14px;line-height:1.4;white-space:nowrap;color:#c5cac7;transition:color .2s}
+.footer-main nav a:hover,.footer-main nav .active{color:#fff}
+.footer-main nav .active:before{content:"";width:12px;height:6px;display:inline-block;vertical-align:middle;margin-right:9px;background:var(--mint);border-radius:9px}
+.copyright{font-size:12px;line-height:1.4;color:#818783;white-space:nowrap}
+.social-links{display:flex;justify-content:flex-end;gap:16px;max-width:var(--max);margin:26px auto 0;position:relative;z-index:2}
+.social-links a{width:18px;height:18px;color:#727975;display:grid;place-items:center}
+.social-links svg{width:100%;height:100%;fill:currentColor}
+.social-links a:hover{color:#fff}
+.footer-watermark{position:absolute;left:50%;bottom:-.48em;transform:translateX(-50%);font:700 clamp(230px,31vw,460px)/.8 Arial,Helvetica,sans-serif;letter-spacing:-.105em;color:#101112;white-space:nowrap;pointer-events:none;user-select:none}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:36px;padding-top:76px;padding-bottom:88px}.hero-copy{max-width:660px}.hero-art{width:min(88%,620px);height:clamp(250px,52vw,360px);justify-self:center;margin:0 0 0 55px}.hero:after{left:12%;right:-20%;bottom:-210px}.closing-card{grid-template-columns:1fr 1fr;padding:55px 6%;gap:25px}.closing-art{height:270px}.footer-main{grid-template-columns:48px 1fr;gap:22px}.footer-main nav{grid-column:1/-1;grid-row:2;flex-wrap:wrap;justify-content:flex-start}.copyright{justify-self:end}}
+@media(max-width:600px){.hero{min-height:0;padding:70px 24px 70px;gap:42px}.hero h1{font-size:clamp(48px,13vw,68px);max-width:510px}.hero-copy>p{margin-bottom:27px}.hero-art{width:calc(100% - 42px);height:clamp(210px,62vw,320px);margin-left:40px}.hero-reel{width:112px;left:-48px;bottom:-23px;border-width:4px}.reel-controls{height:17px;font-size:8px}.brand-statement{min-height:300px;padding:55px 24px 40px}.brand-statement>p{gap:9px;font-size:25px}.brand-statement>p img{width:38px;height:38px;border-radius:8px}.examples-placeholder{font-size:10px;bottom:13px}.ticker{height:190px}.ticker-track{gap:14px;font-size:clamp(35px,10vw,54px)}.closing{padding:58px 20px}.closing-card{display:flex;flex-direction:column;align-items:stretch;gap:35px;padding:42px 25px 25px;min-height:0}.closing h2{font-size:45px}.closing-copy p{font-size:15px}.closing-art{height:230px;margin:0 0 0 18px}.podcast-scene{width:88%}.post-card{width:92px;left:-12px;bottom:0;border-width:4px}.site-footer{padding:28px 24px 0;min-height:320px}.footer-main{grid-template-columns:42px 1fr;gap:20px 14px}.footer-mark{width:42px;height:42px}.footer-main nav{gap:14px 22px}.footer-main nav a{font-size:13px}.copyright{grid-column:1/-1;justify-self:start;font-size:11px}.social-links{justify-content:flex-start;margin-top:22px}.footer-watermark{font-size:220px;bottom:-.25em}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.button{transition:none}}
